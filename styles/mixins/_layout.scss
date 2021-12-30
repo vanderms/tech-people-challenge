@@ -1,0 +1,115 @@
+@use "sass:map";
+
+
+$breakpoints: (
+  small-mobile: 350px,
+  mobile: 700px,
+  tablet: 1100px,
+  laptop: 1366px
+);
+
+
+@mixin media($size){
+  $breakpoint: map.get($breakpoints, $size);
+  @media screen and (max-width: $breakpoint){
+    @content;
+  }
+}
+
+
+@mixin media-only-tablet(){
+  $md: map.get($breakpoints, mobile);
+  $lg: map.get($breakpoints, tablet);
+  @media screen and (min-width: calc($md + 1px)) and (max-width: $lg){
+    @content;
+  }
+}
+
+
+@mixin hide-on($breakpoint){
+  @include media($breakpoint){
+    display: none !important;
+  }
+}
+
+
+$navbar-desktop-height: 122px; //nav: 89px, spacing before 33px (vide design).
+$navbar-mobile-height: 56px;
+
+
+$container-left: calc(50vw - 590px);
+$container-left-laptop: calc(50vw - 530px);
+$container-left-tablet: 5vw;
+$container-left-mobile: 2vw;
+
+$container-right: calc(50vw - 590px);
+$container-right-xl: calc(50vw - 530px);
+$container-right-lg: 5vw;
+$container-right-md: 2vw;
+
+@mixin container($left: true, $right: true){
+  
+  @if($right){ padding-right: $container-right; }
+  @if($left) { padding-left: $container-left; }
+
+  @include media(laptop){
+    @if($right){ padding-right: $container-right-xl; }    
+    @if($left) { padding-left: $container-left-xl; }    
+  }  
+
+  @include media(tablet){
+    @if($right){ padding-right: $container-right-lg;}
+    @if($left) { padding-left: $container-left-lg; }
+  }
+
+  @include media(mobile){
+    @if($right){ padding-right: $container-right-md;}
+    @if($left) { padding-left: $container-left-md; }
+  }
+}
+
+
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
+}
+
+
+@mixin flex-center{
+  display: flex;   
+  justify-content: center;
+  align-items: center;  
+}
+
+
+@mixin flex($direction, $justify, $align){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+@mixin flex-gap($row, $column){
+  >*:not(:first-child){
+    margin-left: $row;
+    margin-top: $column;
+  }
+}
+
+
+@mixin link-no-decoration{  
+  text-decoration: none;
+  color: inherit;
+}
+
+
+@mixin ul-no-decoration{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
