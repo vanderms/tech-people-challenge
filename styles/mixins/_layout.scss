@@ -34,18 +34,18 @@ $breakpoints: (
 
 
 $navbar-desktop-height: 122px; //nav: 89px, spacing before 33px (vide design).
-$navbar-mobile-height: 56px;
+$navbar-mobile-height: 60px;
 
 
 $container-left: calc(50vw - 590px);
 $container-left-laptop: calc(50vw - 530px);
-$container-left-tablet: 5vw;
-$container-left-mobile: 2vw;
+$container-left-tablet: 6vw;
+$container-left-mobile: 3vw;
 
 $container-right: calc(50vw - 590px);
-$container-right-xl: calc(50vw - 530px);
-$container-right-lg: 5vw;
-$container-right-md: 2vw;
+$container-right-laptop: calc(50vw - 530px);
+$container-right-tablet: 6vw;
+$container-right-mobile: 3vw;
 
 @mixin container($left: true, $right: true){
   
@@ -53,18 +53,18 @@ $container-right-md: 2vw;
   @if($left) { padding-left: $container-left; }
 
   @include media(laptop){
-    @if($right){ padding-right: $container-right-xl; }    
-    @if($left) { padding-left: $container-left-xl; }    
+    @if($right){ padding-right: $container-right-laptop; }    
+    @if($left) { padding-left: $container-left-laptop; }    
   }  
 
   @include media(tablet){
-    @if($right){ padding-right: $container-right-lg;}
-    @if($left) { padding-left: $container-left-lg; }
+    @if($right){ padding-right: $container-right-tablet;}
+    @if($left) { padding-left: $container-left-tablet; }
   }
 
   @include media(mobile){
-    @if($right){ padding-right: $container-right-md;}
-    @if($left) { padding-left: $container-left-md; }
+    @if($right){ padding-right: $container-right-mobile;}
+    @if($left) { padding-left: $container-left-mobile; }
   }
 }
 
@@ -98,7 +98,7 @@ $container-right-md: 2vw;
 }
 
 
-@mixin link-no-decoration{  
+@mixin anchor-no-decoration{  
   text-decoration: none;
   color: inherit;
 }

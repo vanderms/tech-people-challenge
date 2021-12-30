@@ -1,7 +1,16 @@
 
+
+
 @mixin color($background-color, $text-color){
   background-color: $background-color;
   color: $text-color;
 }
 
+$white: #fff;
 
+
+$grey-dark: #2F2F2F;
+$grey-medium: #373737;
+$grey: #7D7D7D;
+
+$purple: #A59DFF;

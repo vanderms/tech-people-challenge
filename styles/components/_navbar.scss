@@ -1,0 +1,138 @@
+@use '../mixins' as *;
+
+$topbar-height: 89px;
+$sidebar-width: 240px;
+
+.root-navbar{
+  @include size(100%, $navbar-desktop-height);
+  @include flex(column, flex-end, flex-start);
+
+  @include media(mobile){
+    height: $navbar-mobile-height;
+  }
+}
+
+
+.root-navbar .topbar{
+  @include container;
+  @include size(100%, $topbar-height);
+  @include flex(row, space-between, center);
+  @include color(transparent, $grey-medium);
+  top: -#{$topbar-height};
+
+
+  @include media(mobile){
+    height: $navbar-mobile-height;
+  }
+
+  .purple{
+    display: none;
+  }
+
+
+  .logo {
+    @include media(mobile){
+      height: calc($navbar-mobile-height - 20px);
+      width: auto;
+    }
+  }
+
+ 
+  .navlinks{
+    @include ul-no-decoration;  
+    @include flex(row, flex-start, center);
+    @include flex-gap(35px, unset); 
+    
+    @include media(mobile){
+      display: none;
+    }
+  }
+
+  .navlinks a{
+    @include anchor-no-decoration;
+    font: 500 17px $font-main;    
+  }
+
+  button.menu{
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    @include media(mobile){
+      display: unset;
+    }
+  }
+
+}
+
+.root-navbar.topbar-fixed .topbar{
+  @include color($purple, $white);
+  position: fixed;
+  top: 0px;
+  transition: top 0.3s;
+  
+  .dark{
+    display: none;
+  }
+
+  .purple {
+    display: unset;
+  }
+
+  button.menu path{
+    stroke: $white;
+  }
+}
+
+
+.root-navbar .sidebar{
+  
+  @include size($sidebar-width, 100vh);
+  @include container(false, true);
+  padding-left: 20px;
+  background-color: $white;
+  position: fixed;
+  display: none; 
+  top: 0px;
+  left: -100%;
+
+  .btn-close-container{
+    height: $navbar-mobile-height;
+    @include flex(row, flex-end, center);
+
+    button{
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  .navlinks{
+    @include ul-no-decoration;
+    @include flex(column, flex-start, flex-start);
+    @include flex-gap(unset, 20px);
+    margin-top: 60px;
+  }
+
+  .navlinks a{
+    @include anchor-no-decoration;
+    font: 500 17px $font-main;  
+  }
+
+  @include media(mobile){
+    display: block;
+  } 
+}
+
+.root-navbar.sidebar-open .sidebar{  
+  left: 0px;
+  transition: left 0.25s;
+
+  .backdrop{    
+    position: absolute;    
+    @include size(100vw, 100vh);
+    top: 0px;
+    right: -100vw;
+    background: rgba(0,0, 0, 0.80);    
+  }
+}
