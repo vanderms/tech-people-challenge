@@ -6,6 +6,7 @@ $sidebar-width: 240px;
 .root-navbar{
   @include size(100%, $navbar-desktop-height);
   @include flex(column, flex-end, flex-start);
+  
 
   @include media(mobile){
     height: $navbar-mobile-height;
@@ -15,11 +16,12 @@ $sidebar-width: 240px;
 
 .root-navbar .topbar{
   @include container;
+    
   @include size(100%, $topbar-height);
   @include flex(row, space-between, center);
   @include color(transparent, $grey-medium);
   top: -#{$topbar-height};
-
+  max-width: 1440px;
 
   @include media(mobile){
     height: $navbar-mobile-height;
@@ -66,10 +68,11 @@ $sidebar-width: 240px;
 }
 
 .root-navbar.topbar-fixed .topbar{
-  @include color($purple, $white);
+  @include color($purple-light, $white);
   position: fixed;
   top: 0px;
   transition: top 0.3s;
+  z-index: 999;
   
   .dark{
     display: none;
@@ -95,6 +98,7 @@ $sidebar-width: 240px;
   display: none; 
   top: 0px;
   left: -100%;
+  z-index: 1000;
 
   .btn-close-container{
     height: $navbar-mobile-height;

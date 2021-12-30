@@ -1,0 +1,141 @@
+@use '../mixins' as *;
+
+.root-hero{
+  @include container(true, true);
+  @include flex(row, space-between, flex-start);
+  overflow: hidden;
+  
+  @include media(tablet){
+    flex-direction: column;
+  }
+
+  .content {
+    width: 54.25%;    
+    margin-top: 114px;
+    
+    @include media(tablet){
+      width: 100%;
+      margin-top: 100px;
+    }
+
+    
+
+       
+    .title {
+      font: 900 56px $font-headlines;     
+      margin: 0;
+      line-height: 1.17; 
+      
+      @include media(tablet){
+        width: 20ch;
+      }
+
+      @include media(mobile){
+        font-size: 30px;
+        text-align: center; 
+        width: 100%;       
+      }
+
+      @include media(small-mobile){
+        font-size: 28px;       
+      }
+    }
+
+    .title strong{
+      color: $purple; 
+      font-weight: 900;     
+    }
+
+    .subtitle{
+      margin: 0;
+      margin-top: 32px;
+      font: 500 22px /1.6 $font-main;
+      color: $grey;
+
+      @include media(tablet){
+        max-width: 60ch;
+      }
+
+      @include media(mobile){
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+    
+    .cta{
+      @include flex(row, space-between, center);
+      @include size(262px, 64px);
+      @include color($purple, $white);
+      font: 500 22px $font-main;
+      margin-top: 32px;
+      border: none;
+      border-radius: 11px;
+      cursor: pointer;
+      padding: 0 22px;     
+
+      @include media(mobile){
+        @include size(180px, 58px);
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 18px;
+        
+      }
+    }
+  }
+
+
+  .illustration{
+    width: 45.75%;
+    margin-top: 114px;
+    position: relative;   
+    @include flex(column, flex-start, flex-end);
+
+    @include media(tablet){
+      width: 100%;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    img{
+      position: relative;
+      z-index: 2;
+      @include media(tablet){
+        margin-left: 50px;
+      }
+
+      @include media(mobile){
+        width: 100%;
+        height: auto;
+        margin-left: unset;
+      }
+
+    }
+
+    .shape{
+      @include size(1130px, 1130px);
+      position: absolute;
+      z-index: 1;
+      clip-path: ellipse(50% 28% at 50% 50%);
+      background: linear-gradient(189.79deg, #8471FF 8.03%, #717CFF 53.55%);
+      opacity: 0.7;
+      top: -130px;
+      left: calc(100% - 450px);
+
+      @include media(tablet){
+        left: calc(50% - 190px);        
+      }
+
+      @include media(mobile){
+        @include size(200%, 200%);
+        margin-top: 20%;
+
+      }
+    }
+
+  }
+
+  
+
+}

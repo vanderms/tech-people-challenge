@@ -4,7 +4,7 @@
 $breakpoints: (
   small-mobile: 350px,
   mobile: 700px,
-  tablet: 1100px,
+  tablet: 1160px,
   laptop: 1366px
 );
 
@@ -37,15 +37,15 @@ $navbar-desktop-height: 122px; //nav: 89px, spacing before 33px (vide design).
 $navbar-mobile-height: 60px;
 
 
-$container-left: calc(50vw - 590px);
-$container-left-laptop: calc(50vw - 530px);
-$container-left-tablet: 6vw;
-$container-left-mobile: 3vw;
+$container-left: Min(130px, calc(50% - 590px));
+$container-left-laptop: calc(50% - 560px);
+$container-left-tablet: 6%;
+$container-left-mobile: 3%;
 
-$container-right: calc(50vw - 590px);
-$container-right-laptop: calc(50vw - 530px);
-$container-right-tablet: 6vw;
-$container-right-mobile: 3vw;
+$container-right: Min(130px, calc(50% - 590px));
+$container-right-laptop: calc(50% - 560px);
+$container-right-tablet: 6%;
+$container-right-mobile: 3%;
 
 @mixin container($left: true, $right: true){
   
@@ -67,6 +67,7 @@ $container-right-mobile: 3vw;
     @if($left) { padding-left: $container-left-mobile; }
   }
 }
+
 
 
 @mixin size($width, $height){
