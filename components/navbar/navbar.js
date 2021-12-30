@@ -1,4 +1,3 @@
-import path from '../../lib/path';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Navlinks from './navlinks';
@@ -32,8 +31,8 @@ export default function Navbar(){
       <div className="topbar">
         <Link href='#'>
           <a aria-label='ir para a homepage'>
-            <img src={ path('/logo.svg') } alt="logo" className="logo dark" />
-            <img src={ path('./logo-white-hoz.svg') } alt="logo" className='logo purple' />
+            <img src='/logo.svg' alt="logo" className="logo dark" />
+            <img src='./logo-white-hoz.svg' alt="logo" className='logo purple' />
           </a>
         </Link>
         <Navlinks/>
