@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 
 export default function HeroSection(){
@@ -20,7 +21,10 @@ export default function HeroSection(){
         </div>      
       </div>
       <div className="illustration">
-        <img src="/cover.png" alt="uma jovem com roupa de formatura" />
+        <div className="img-container">
+        <Image src="/cover.png" alt="uma jovem com roupa de formatura" layout='fill'/>
+        </div>
+        
         <div className="shape"></div>
                
       </div>

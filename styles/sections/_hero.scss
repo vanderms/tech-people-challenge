@@ -99,20 +99,20 @@
       margin-top: 60px;
     }
 
-    img{
+    .img-container{
       position: relative;
+      @include size(470px, 565px);
       z-index: 2;
       @include media(tablet){
         margin-left: 50px;
       }
 
       @include media(mobile){
-        width: 100%;
-        height: auto;
+        @include size(100%, 0px);        
+        padding-bottom: 120%;        
         margin-left: unset;
       }
-
-    }
+    }   
 
     .shape{
       @include size(1130px, 1130px);
