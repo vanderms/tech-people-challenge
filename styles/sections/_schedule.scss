@@ -59,7 +59,7 @@
     margin-top: 26px;
     @include flex(row, space-between, center);
     
-    @include media(mobile){
+    @include media(small-mobile){
       flex-direction: column-reverse;
       height: 60px;
       align-items: flex-start;
