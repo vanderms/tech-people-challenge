@@ -45,16 +45,14 @@
   .circle{
     @include size(76px, 76px);
     border-radius: 50%;
-    @include flex-center;    
+    @include flex-center;
   }
 
-  .heading-3 h3{
-    font: 700 24px $font-main;
+  .root-heading-3 h3{    
     margin: 44px 0px 0px 0px;
   }
 
   .content{
-    font: 500 16px /28px $font-main;
-    color: rgba(55, 71, 79, 0.721569);;
+    @include paragraph-opaque;
   }
 }

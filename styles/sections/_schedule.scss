@@ -1,0 +1,122 @@
+@use '../mixins' as *;
+@use 'sass:color';
+
+.root-schedule{
+  @include section-spacing;
+
+  .cards{
+    @include container;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 540px 540px;
+    justify-content: space-between;   
+    
+    @include media(tablet){
+      grid-template-columns: Min(100%, 540px);
+      gap: 45px;
+      justify-content: center;
+    }
+  }  
+}
+
+
+.root-schedule .card{
+  @include flex(column, space-between, flex-start);
+  padding: 28px;
+
+  .date-and-title{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 19px;
+
+    @include media(small-mobile){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .date{
+    @include size(76px, 76px);
+    @include flex(column, center, center);
+    background-color: $purple-opaque;
+    color: $purple;
+
+    .day{
+      font: 700 27px $font-main;      
+    }
+    .month{
+      font: 900 18px $font-main;
+    }
+  }
+
+  .description{
+    margin-top: 28px;
+    @include paragraph-opaque;
+  }
+
+  .cta-and-time{
+    width: 100%;
+    margin-top: 26px;
+    @include flex(row, space-between, center);
+    
+    @include media(mobile){
+      flex-direction: column-reverse;
+      height: 60px;
+      align-items: flex-start;
+    }
+  }
+
+  .join{
+    @include flex(row, flex-start, center);
+    @include flex-gap(32px, unset);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include media(mobile){
+      @include flex-gap(12px, unset);
+    }
+
+    span{
+      font: 700 17px $font-main;
+      color: $purple;
+    }
+
+    svg{
+      @include size(auto, 16px);
+    }
+  }
+
+  .time{
+    @include flex(row, flex-start, center);
+    @include flex-gap(16px, unset);
+    font: 900 16px $font-main;
+    color: $grey-medium;
+
+    @include media(mobile){
+      @include flex-gap(12px, unset);
+    }    
+    
+    svg{
+      @include size(auto, 16px);
+    }
+  }
+}
+
+.root-schedule .pagination{
+  @include flex(row, center, center);
+  @include flex-gap(20px, unset);
+  margin-top: 80px;
+
+  a {
+    @include size(10px, 10px);
+    background-color: $grey-opaque;
+    border-radius: 50%;
+
+    &.active{
+      @include size(14px, 14px);
+      background-color: $purple;
+    }
+  } 
+
+}

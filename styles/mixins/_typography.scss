@@ -15,3 +15,7 @@ $font-headlines: 'Roboto', sans-serif;
   }
 }
 
+@mixin paragraph-opaque{
+  font: 500 16px /28px $font-main;
+    color: $grey-opaque;
+}

@@ -112,5 +112,11 @@ $container-right-mobile: 3%;
 }
 
 
-
+@mixin section-spacing{
+  margin-top: 60px;
+  padding-top: 140px;
+  @include media(mobile){
+    padding-top: 100px;
+  }
+}
 

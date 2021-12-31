@@ -3,13 +3,15 @@
 
 .root-news {
 
+  @include section-spacing;
+
   .cards{
+    @include container;
     margin-top: 80px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     gap: 45px;
-
 
     @include media(tablet){
       grid-template-columns: 1fr 1fr;

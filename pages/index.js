@@ -2,6 +2,7 @@ import Head from 'next/head';
 import CommitmentSection from '../components/sections/commitment/commitment';
 import HeroSection from '../components/sections/hero/hero';
 import NewsSection from '../components/sections/news/news';
+import ScheduleSection from '../components/sections/schedule/schedule';
 
 
 export async function getStaticProps(){
@@ -10,16 +11,16 @@ export async function getStaticProps(){
   return {
     props: { 
       commitments: data.commitments,
-      news: data.news  
+      news: data.news,
+      events: data.events
     }
   }  
 }
 
 
 
-export default function Home({ commitments, news }) {
+export default function Home({ commitments, news, events }) {  
   
-  console.log(news);
   return (
     <>
       <Head>
@@ -30,6 +31,7 @@ export default function Home({ commitments, news }) {
       <HeroSection/>
       <CommitmentSection data={ commitments }/>
       <NewsSection data={ news }/>
+      <ScheduleSection data={ events }/>
     </>
   )
 }

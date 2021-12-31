@@ -63,6 +63,64 @@
       "title": "Como apoiar uma desenvolvedora em início de carreira?",
       "date" : "17 Abr 2020"
     }
+  ],
 
+  "events": [
+    {
+      "id": 1,
+      "date": "20 Jan",
+      "title": "Live: Iniciando com Nuxt por Mateus Ávila Isidoro",
+      "description": "Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur;",
+      "time": "19:00 - 22:00"
+    },
+    {
+      "id": 2,
+      "date": "25 Dez",
+      "title": "Live: React com TDD por Darlan Tódero ten Caten",
+      "description": "Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur;",
+      "time": "18:00 - 19:00"
+    },
+    {
+      "id": 3,
+      "date": "02 Fev",
+      "title": "Live: Django por Franco Nero ",
+      "description": "Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur;",
+      "time": "18:00 - 19:00"
+    },
+    {
+      "id": 4,
+      "date": "17 Mar",
+      "title": "Live: PHP sem Gambiarras por John Doe ",
+      "description": "Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur;",
+      "time": "12:00 - 15:00"
+    },
+    {
+      "id": 5,
+      "date": "19 Abr",
+      "title": "Bootcamp: CSS como centralizar um elemento em menos de dois dias",
+      "description": "Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur;",
+      "time": "21:00 - 22:00"
+    },
+    {
+      "id": 6,
+      "date": "21 Mai",
+      "title": "Terapia: Como se recuperar emocionalmente após um innerHTML",
+      "description": "Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur;",
+      "time": "07:00 - 09:00"
+    },
+    {
+      "id": 7,
+      "date": "29 Mai",
+      "title": "Doutorado: Template specialization em C++",
+      "description": "Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur;",
+      "time": "14:00 - 16:00"
+    },
+    {
+      "id": 8,
+      "date": "06 Jun",
+      "title": "Live: Java, 'Hello World' com injeção de dependência",
+      "description": "Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur;",
+      "time": "18:00 - 19:00"
+    }
   ]
 }
