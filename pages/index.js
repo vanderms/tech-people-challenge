@@ -28,8 +28,8 @@ export default function Home({ commitments, news, events }) {
         <meta name="description" content="Tech People: um servidor focado em transição de carreira" />
   
         {/* <!-- Site Name, Title, and Description to be displayed --> */}
-        <meta property="og:site_name" content="People Tech"/>
-        <meta property="og:title" content="People Tech"/>
+        <meta property="og:site_name" content="Tech People"/>
+        <meta property="og:title" content="Tech People"/>
         <meta property="og:description" content="Tech People: um servidor focado em transição de carreira"/>
 
         {/* <!-- Image to display -->  */}
