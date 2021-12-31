@@ -50,9 +50,8 @@
     @include flex-gap(15px, unset);
     font: 900 16px $font-main;
     color: $grey;
-    svg{
-      height: 16px;
-      width: auto;
+    .icon-svg{
+      @include size(auto, 16px);
     }
   }
 

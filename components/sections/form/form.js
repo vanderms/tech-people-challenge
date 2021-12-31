@@ -1,4 +1,3 @@
-import IconArrow from "../../icons/icon-arrow";
 import { useState } from "react";
 import Loading from "./loading";
 import Message from "./message";
@@ -59,7 +58,7 @@ export default function FormSection(){
           </div>          
           <button type="submit">
             <span>Cadastre-se</span>
-            <IconArrow/>
+            <img className='icon-arrow' src="/icons/arrow-right.svg" alt="icone seta para a direita" />
           </button>          
         </form>    
         </div>  

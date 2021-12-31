@@ -66,6 +66,10 @@
     }
   }
 
+  .icon-svg {
+    @include size(auto, 16px);
+  }
+
   .join{
     @include flex(row, flex-start, center);
     @include flex-gap(32px, unset);
@@ -80,11 +84,7 @@
     span{
       font: 700 17px $font-main;
       color: $purple;
-    }
-
-    svg{
-      @include size(auto, 16px);
-    }
+    }    
   }
 
   .time {
@@ -96,10 +96,6 @@
     @include media(mobile){
       @include flex-gap(12px, unset);
     }    
-    
-    svg{
-      @include size(auto, 16px);
-    }
   }
 }
 

@@ -8,7 +8,5 @@ export default function IconMenu(){
       <path id="Path_7" data-name="Path 7" d="M4.5,27h27" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
     </g>
   </svg>
-  
-  
   )
 }

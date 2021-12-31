@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Navlinks from './navlinks';
 import IconMenu from '../icons/icon-menu';
-import IconClose from '../icons/icon-close';
+
 
 
 export default function Navbar(){
@@ -43,7 +43,7 @@ export default function Navbar(){
       <div className="sidebar">
         <div className="btn-close-container">
           <button aria-label='fechar menu lateral' className="close" onClick={ closeSidebar }>
-            <IconClose/>
+            <img src="/icons/close.svg" alt="icone de fechar" />
           </button>
         </div>       
         <Navlinks onClick={ closeSidebar }/>

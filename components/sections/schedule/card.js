@@ -1,5 +1,4 @@
-import IconArrow from "../../icons/icon-arrow";
-import IconClock from "../../icons/icon-clock";
+
 
 export default function Card({ title, description, date, time }){
 
@@ -23,10 +22,10 @@ export default function Card({ title, description, date, time }){
       <div className="cta-and-time">
         <button className="join">
           <span>Participar</span> 
-          <IconArrow/>  
+          <img className='icon-svg' src="/icons/arrow-right.svg" alt="icone seta para a direita" />
         </button>
         <div className="time">
-          <IconClock/>  
+          <img className="icon-svg" src="/icons/clock.svg" alt="icone relógio" />
           <span>{ time }</span>
         </div>
       </div>

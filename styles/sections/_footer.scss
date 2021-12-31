@@ -49,7 +49,7 @@
   .social-links{
     @include flex(row, flex-start, center);
     @include flex-gap(28px, unset);
-    svg{
+    img{
       @include size(auto, 16px);      
     }
   }
