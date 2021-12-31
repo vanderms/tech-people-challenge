@@ -2,6 +2,55 @@
 
 .root-footer{
   margin-top: 100px;
-  @include size(100%, 180px);
+  padding: 55px 0px;  
+  @include container;  
   @include color($purple, $white);
+  @include flex(row, flex-start, center); 
+  @include flex-gap(45px, unset);
+  
+
+  @include media(mobile){
+    padding-bottom: 0px;
+    flex-direction: column;
+    @include flex-gap(unset, 20px);
+    
+    .logo{
+      order: 1;
+    }
+    .social-links{
+      order: 2;
+    }
+
+    .copyright{
+      order: 3;
+    }
+  }
+
+
+  .copyright{
+    font: 500 18px $font-main;
+    width: 25ch;
+    @include media(mobile){
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      width: 100%;
+      
+    }
+  }
+
+  .spacing{
+    flex-grow: 1;
+  }
+  
+
+  .social-links{
+    @include flex(row, flex-start, center);
+    @include flex-gap(28px, unset);
+    svg{
+      @include size(auto, 16px);      
+    }
+  }
+
+
 }
