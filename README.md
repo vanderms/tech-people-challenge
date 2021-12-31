@@ -1,6 +1,6 @@
 # TECH PEOPLE CHALLENGE
 
-**Desafio Front End Pessoas de Tech** is a project of a Landing Page created by Mateus Avila from Pessoas de Tech. The details and requisites of the project can be consulted on [https://github.com/mateusavila/dev-pessoas-de-tech-2/].
+**Desafio Front End Pessoas de Tech** is a project of a Landing Page created by Mateus Avila from Pessoas de Tech. The details and requisites of the project can be consulted on <https://github.com/mateusavila/dev-pessoas-de-tech-2/>.
 
 My planning was to finish the project in about fifteen hours or three days. So, since the beginning, I knew that to implement the backend side would not be possible considering the time constraints. 
 
@@ -17,7 +17,7 @@ Finally, in the future, maybe I will implement the backend part. I've made some 
 
 ## MAIN REQUISITES OF THE PROJECT:
 
-The requisites of the project in Portuguese can be consulted on [https://github.com/mateusavila/dev-pessoas-de-tech-2/].
+The requisites of the project in Portuguese can be consulted on <https://github.com/mateusavila/dev-pessoas-de-tech-2/>.
 
 
 ## HOW TO INSTALL, RUN, ETC.
@@ -38,7 +38,7 @@ Obviously, you need to have **NodeJs** and **NPM** installed on your computer.
 
 ## WEBSITE LIVE
 
-My solution is hosted in Vercel. You can see it in [https://tech-people-challenge.vercel.app/].
+My solution is hosted in Vercel. You can see it in <https://tech-people-challenge.vercel.app/>.
 
 
 
