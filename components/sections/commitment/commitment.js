@@ -10,7 +10,7 @@ export default function CommitmentSection({ data }){
   return(
     <section className="root-commitment" id="compromisso">
       <div className="shape"></div>
-      <header className='heading-2'>
+      <header className='root-heading-2'>
         <h2 className="title">Nosso Compromisso</h2>
         <p className="subtitle">Temos um compromisso de fazer desafios e gerar avaliações precisas para que você saiba o quanto está evoluíndo. Acreditamos que você merece uma avaliação justa e precisa do seu processo.</p>
       </header>

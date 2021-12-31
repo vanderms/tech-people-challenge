@@ -1,0 +1,31 @@
+@use '../mixins' as *;
+
+
+.root-heading-2{  
+  margin-top: 200px;
+  @include flex(column, flex-start, center);
+  @include media(mobile){
+    margin-top: 160px;
+  }
+
+  .title{
+    font: 700 37px $font-main;
+    text-align: center;
+    margin: 0px;
+
+    @include media(mobile){
+      font-size: 26px;
+    }
+  }
+
+  .subtitle{
+    margin: 25px 0px 0px 0px;
+    @include typo-subtitle;
+    width: 75ch;
+    text-align: center;
+
+    @include media(tablet){
+      width: 90%;
+    }
+  }    
+}

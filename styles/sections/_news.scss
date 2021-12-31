@@ -1,0 +1,63 @@
+@use '../mixins' as *;
+
+
+.root-news {
+
+  .cards{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 45px;
+
+
+    @include media(tablet){
+      grid-template-columns: 1fr 1fr;
+      .card:first-of-type{
+        grid-column: 1/ span 2;
+      }
+    }
+
+    @include media(mobile){
+      grid-template-columns: Min(500px, 100%);
+
+      .card:first-of-type{
+        grid-column: 1;
+      }
+    }
+  }
+}
+
+
+.root-news .card{
+  .image-container{
+    width: 100%;
+    padding-bottom: 65.12%;
+    position: relative;
+  }
+
+  .content{
+    padding: 28px 28px 62px 28px;
+    @include media(mobile){
+      padding: 28px 15px 30px 15px;
+    }
+  }
+
+  .date-row{   
+    @include flex(row, flex-start, center);
+    @include flex-gap(15px, unset);
+    font: 900 16px $font-main;
+    color: $grey;
+    svg{
+      height: 16px;
+      width: auto;
+    }
+  }
+
+  .heading-3 h3{
+    margin: 0;
+    margin-top: 17px;
+    font: 700 22px $font-main;
+    color: $grey;
+  }
+}

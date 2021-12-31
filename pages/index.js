@@ -1,21 +1,25 @@
 import Head from 'next/head';
 import CommitmentSection from '../components/sections/commitment/commitment';
 import HeroSection from '../components/sections/hero/hero';
+import NewsSection from '../components/sections/news/news';
 
 
 export async function getStaticProps(){
-  const data = await import('../public/commitments/data.json'); 
+  const data = await import('../public/data.json'); 
 
   return {
-    props: { commitments: data.commitments }
+    props: { 
+      commitments: data.commitments,
+      news: data.news  
+    }
   }  
 }
 
 
 
-export default function Home({ commitments }) {
+export default function Home({ commitments, news }) {
   
-
+  console.log(news);
   return (
     <>
       <Head>
@@ -25,6 +29,7 @@ export default function Home({ commitments }) {
       </Head>     
       <HeroSection/>
       <CommitmentSection data={ commitments }/>
+      <NewsSection data={ news }/>
     </>
   )
 }

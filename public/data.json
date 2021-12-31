@@ -42,5 +42,27 @@
       "title": "Contra o apagão da TI",
       "content": "Se você for bem neste desafio, vamos ter prazer em te indicar para vagas em empresas parceiras. Não temos vagas, mas temos um networking gigantesco."
     }
+  ],
+
+  "news" : [
+    {
+      "id" : 1,
+      "image": "/react.png",
+      "title": "Participe da nossa Live sobre React e testes TDD",
+      "date" : "17 Abr 2020"
+    },
+    {
+      "id" : 2,
+      "image": "/turing.png",
+      "title": "Participe da nossa live de Nuxt para a Turing",
+      "date" : "17 Abr 2020"
+    },
+    {
+      "id" : 3,
+      "image": "/carreira.png",
+      "title": "Como apoiar uma desenvolvedora em início de carreira?",
+      "date" : "17 Abr 2020"
+    }
+
   ]
 }
