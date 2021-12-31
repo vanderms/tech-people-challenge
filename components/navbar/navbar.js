@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Navlinks from './navlinks';
-import IconMenu from './icon-menu';
-import IconClose from './icon-close';
+import IconMenu from '../icons/icon-menu';
+import IconClose from '../icons/icon-close';
 
 
 export default function Navbar(){

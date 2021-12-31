@@ -3,6 +3,7 @@ import CommitmentSection from '../components/sections/commitment/commitment';
 import HeroSection from '../components/sections/hero/hero';
 import NewsSection from '../components/sections/news/news';
 import ScheduleSection from '../components/sections/schedule/schedule';
+import FormSection from '../components/sections/form/form';
 
 
 export async function getStaticProps(){
@@ -18,7 +19,6 @@ export async function getStaticProps(){
 }
 
 
-
 export default function Home({ commitments, news, events }) {  
   
   return (
@@ -32,6 +32,7 @@ export default function Home({ commitments, news, events }) {
       <CommitmentSection data={ commitments }/>
       <NewsSection data={ news }/>
       <ScheduleSection data={ events }/>
+      <FormSection/>
     </>
   )
 }

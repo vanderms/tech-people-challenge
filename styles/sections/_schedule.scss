@@ -87,7 +87,7 @@
     }
   }
 
-  .time{
+  .time {
     @include flex(row, flex-start, center);
     @include flex-gap(16px, unset);
     font: 900 16px $font-main;

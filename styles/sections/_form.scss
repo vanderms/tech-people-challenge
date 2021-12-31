@@ -1,0 +1,216 @@
+@use '../mixins/' as *;
+
+.root-form{
+  margin-top: 160px;
+  @include container;
+  position: relative;
+
+  .section-form-container{
+    position: relative;
+    z-index: 1;
+  }  
+
+  .root-heading-2{
+    align-items: flex-start;  
+
+    .title{
+      text-align: left; 
+    }    
+    
+    .subtitle{
+      text-align: left;
+      margin-top: 14px;
+      font: 400 18px $font-main;
+    }
+  } 
+}
+
+
+.root-form  .form{
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 262px;
+  gap: 20px;
+
+  @include media(tablet){
+    grid-template-columns: repeat(3, 1fr);
+      
+      & > *:nth-child(1){
+        order: 1;
+        grid-column: 1 / span 2;
+      }
+      & > *:nth-child(2){
+        order: 3;
+        grid-column: 1 / span 3;
+      }
+
+      & > *:nth-child(3){
+        order: 2;
+        
+      }
+      & > *:nth-child(4){
+        order: 4;
+        grid-column: 1 / span 3;
+      }    
+  }
+
+  @include media(mobile){
+    grid-template-columns: 1fr;
+      
+      & > *:nth-child(1){
+        order: 1;
+        grid-column: unset;
+      }
+      & > *:nth-child(2){
+        order: 2;
+        grid-column: unset;
+      }
+
+      & > *:nth-child(3){
+        order: 3;
+        
+      }
+      & > *:nth-child(4){
+        order: 4;
+        grid-column: unset;
+      }    
+  }
+
+  .item, button {
+    position: relative;
+    height: 64px;
+    width: 100%;   
+
+    @include media(laptop){
+      height: 56px;
+    }
+   
+  }
+
+  input {           
+    position: relative;
+    z-index: 1;      
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border: 1px solid #DEDEDE;
+    font-size: 18px;      
+  }
+
+  label {
+    position: absolute;
+    font: 400 16px $font-main;
+    z-index: 2;
+   
+    left: 11px;         
+    line-height: 20px;       
+    padding-left: 5px;
+    top: calc(50% - 10px);      
+    color: $grey-opaque;   
+    transition: all 0.25s ease-in-out; 
+    
+    &.active{
+      top: -10px;
+     font-size: 14px;
+      background-color: white;
+      display: inline-block;
+      padding: 0px 5px;      
+    }
+  }
+
+  button[type=submit]{
+    @include flex(row, space-between, center);
+    padding: 0 34px;
+    border: none;
+    border-radius: 11px;
+    background: $purple;
+    font: 500 22px $font-main;
+    color: $white;
+    cursor: pointer;
+
+    svg{
+      height: 17px;
+      width: auto;
+    }    
+    
+    &:hover{
+      background-color: $blue;
+    }
+  }   
+}
+
+
+.root-form .loading{
+  position: absolute;
+  display: none;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  z-index: 2;  
+
+  &.active{
+    @include flex(column, center, center);
+  }
+
+  svg{
+    width: 64px;
+    height: auto;
+    animation: spin 2s linear infinite;
+  }
+
+  .text{
+    margin-top: 15px;
+    font: 700 24px $font-main;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.root-form .message{
+  position: absolute;
+  display: none;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  z-index: 3;  
+
+  &.active{
+    @include flex(column, center, center);
+  }
+
+  .status {
+    color: $grey-dark;    
+    font: 700 37px $font-main;
+    @include media(mobile){
+      font-size: 26px;
+    }
+  }
+
+  .answer{
+    margin: 0;
+    margin-top: 14px;
+    font: 400 18px $font-main;
+    color: $grey-opaque;
+  }
+
+  .close{
+    margin-top: 42px;
+    padding: 4px 60px;
+    font: 500 18px / 40px $font-main;
+    border-radius: 10px;
+    border: none;
+    background-color: $purple;
+    color: white;
+    cursor: pointer;
+  }
+
+}

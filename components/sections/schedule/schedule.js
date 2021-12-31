@@ -13,6 +13,7 @@ export default function ScheduleSection({ data }){
         <h2 className="title">Anota aí na nossa agenda</h2>
         <p className="subtitle">Temos um monte de eventos que estamos criando no nosso servidor. Fique de olho que sempre tem coisa boa!</p>
       </header>
+      <div id="eventos"></div>
       <div className="cards">
         <Card { ...first }/>
         <Card { ... second }/>
@@ -21,25 +22,25 @@ export default function ScheduleSection({ data }){
         <a
           className={ page == 0 ? 'active' : null }
           aria-label='exibir eventos 1 e 2' 
-          href="#agenda" 
+          href="#eventos" 
           onClick={ () => setPage(0) }
         ></a>
         <a 
           className={ page == 1 ? 'active' : null }
           aria-label='exibir eventos 3 e 4' 
-          href="#agenda" 
+          href="#eventos" 
           onClick={ () => setPage(1) }
         ></a>
         <a
           className={ page == 2 ? 'active' : null } 
           aria-label='exibir eventos 5 e 6' 
-          href="#agenda" 
+          href="#eventos" 
           onClick={ () => setPage(2) }
         ></a>
         <a 
           className={ page == 3 ? 'active' : null }
           aria-label='exibir eventos 7 e 8' 
-          href="#agenda" 
+          href="#eventos" 
           onClick={ () => setPage(3) }
         ></a>
       </div>

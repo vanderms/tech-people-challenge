@@ -1,5 +1,5 @@
-import IconArrow from "./icon-arrow";
-import IconClock from "./icon-clock";
+import IconArrow from "../../icons/icon-arrow";
+import IconClock from "../../icons/icon-clock";
 
 export default function Card({ title, description, date, time }){
 
