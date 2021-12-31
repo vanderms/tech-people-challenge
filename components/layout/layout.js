@@ -7,41 +7,7 @@ export default function Layout({ children }){
       <Navbar/>   
       <main>
       { children } 
-      </main>      
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p> 
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>     
-      <p>Dummy</p>           
+      </main>
     </>
   )
 }

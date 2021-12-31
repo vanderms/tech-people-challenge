@@ -1,0 +1,46 @@
+{
+  "commitments":[
+    {
+      "id" : 1,
+      "icon" : "/star.svg",
+      "color": "#717CFF",
+      "title": "Avaliar positivamente",
+      "content": "Entendemos que você está aprendendo. A gente também passou por esta fase, e sabemos que as coisas mudam muito rápido."
+    },
+    {
+      "id" : 2,
+      "icon" : "/study.svg",
+      "color": "#FF5959",
+      "title": "Apoio pós-desafio",
+      "content": "Você saberá como está evoluindo, e nós aprendemos a deixar o nosso processo avaliativo mais seguro e de confiança."
+    },
+    {
+      "id" : 3,
+      "icon" : "/check.svg",
+      "color": "#70CE88",
+      "title": "Avaliar o que faz sentido",
+      "content": "Nada de algoritmo de número primo ou de árvore binária. Nossos desafios se basearam no que você irá realmente trabalhar no futuro."
+    },
+    {
+      "id" : 4,
+      "icon" : "/choice.svg",
+      "color": "#5C96FF",
+      "title": "Liberdade na escolha",
+      "content": "Temos nossas preferências, mas a decisão de qual tecnologia você quer fazer o desafio fica a seu critério."
+    },
+    {
+      "id" : 5,
+      "icon" : "/deadline.svg",
+      "color": "#FA706C",
+      "title": "Nada de prazos irreais",
+      "content": "Temos nossa rotina de trabalho, família e vida pessoal. Faça no seu tempo. Corrigiremos no nosso tempo também! :)"
+    },
+    {
+      "id" : 6,
+      "icon" : "/suitcase.svg",
+      "color": "#27AE60",
+      "title": "Contra o apagão da TI",
+      "content": "Se você for bem neste desafio, vamos ter prazer em te indicar para vagas em empresas parceiras. Não temos vagas, mas temos um networking gigantesco."
+    }
+  ]
+}

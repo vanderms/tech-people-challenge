@@ -1,0 +1,79 @@
+@use '../mixins' as *;
+
+.root-commitment{
+  position: relative;
+  z-index: 5;
+
+  .shape{
+      @include size(100%, 312px);
+      background-color: white;
+      clip-path: polygon(100% 0%, 0% 10%, 0% 100%, 100% 100%);
+      margin-top: -100px;
+      position: relative;
+      z-index: 6;
+  }
+
+  .heading-2{
+    margin-top: -174px;
+    @include flex(column, flex-start, center);
+    position: relative;
+    z-index: 7;
+    
+  }
+
+  .title{
+    font: 700 37px $font-main;
+    text-align: center;
+    margin: 0px;
+
+    @include media(mobile){
+      font-size: 26px;
+    }
+  }
+
+  .subtitle{
+    margin: 25px 0px 0px 0px;
+    @include typo-subtitle;
+    width: 75ch;
+    text-align: center;
+
+    @include media(tablet){
+      width: 90%;
+    }
+  }
+
+  .cards{
+    @include container;
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 45px 20px;
+
+    @include media(mobile){
+      column-gap: 20px;
+      grid-template-columns: Min(500px, 100%);
+    }
+  }
+}
+
+
+.root-commitment .card{  
+  padding: 30px;
+
+  .circle{
+    @include size(76px, 76px);
+    border-radius: 50%;
+    @include flex-center;    
+  }
+
+  .heading-3 h3{
+    font: 700 24px $font-main;
+    margin: 44px 0px 0px 0px;
+  }
+
+  .content{
+    font: 500 16px /28px $font-main;
+    color: rgba(55, 71, 79, 0.721569);;
+  }
+}

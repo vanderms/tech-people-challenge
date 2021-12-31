@@ -1,5 +1,16 @@
+@use './layout' as *;
+@use './colors' as *;
+
 
 $font-main: 'Roboto', sans-serif;
 $font-headlines: 'Roboto', sans-serif;
 
 
+@mixin typo-subtitle {
+  font: 500 22px /1.6 $font-main;
+  color: $grey;
+
+  @include media(mobile){   
+    font-size: 18px;    
+  }
+}

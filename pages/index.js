@@ -1,7 +1,21 @@
 import Head from 'next/head';
+import CommitmentSection from '../components/sections/commitment/commitment';
 import HeroSection from '../components/sections/hero/hero';
 
-export default function Home() {
+
+export async function getStaticProps(){
+  const data = await import('../public/commitments/data.json'); 
+
+  return {
+    props: { commitments: data.commitments }
+  }  
+}
+
+
+
+export default function Home({ commitments }) {
+  
+
   return (
     <>
       <Head>
@@ -10,7 +24,7 @@ export default function Home() {
         <link rel="icon" type="image/png" href="/ico.png" />
       </Head>     
       <HeroSection/>
-
+      <CommitmentSection data={ commitments }/>
     </>
   )
 }
